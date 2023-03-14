@@ -19,11 +19,11 @@
 
 ### 项目框架：
 
-前端：Vue.js
+前端：Vue.js + WebGL + ElementUI + Axios
 
-后端：SpringBoot
+后端：SpringBoot + Redis + Kafka + MyBatis-plus 
 
-算法：OpenCV, Dijkstra, FCFS......
+算法：YoloV5, Dijkstra/DFS, FCFS/SJF......
 
 
 ### 非功能性需求
