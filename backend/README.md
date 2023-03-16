@@ -18,8 +18,8 @@ SmartWarehouse
 │   │   │               │   ├── UserService.java
 │   │   │               │   └── impl
 │   │   │               │       └── UserServiceImpl.java
-│   │   │               ├── repository (数据访问层)
-│   │   │               │   └── UserRepository.java
+│   │   │               ├── mapper (数据访问层)
+│   │   │               │   └── UserMapper.java
 │   │   │               ├── pojo (实体类)
 │   │   │               │   └── User.java
 │   │   │               └── config (配置类)
