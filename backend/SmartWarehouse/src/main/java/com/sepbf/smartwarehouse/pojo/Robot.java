@@ -1,7 +1,11 @@
+package com.sepbf.smartwarehouse.pojo;
+
 import java.sql.Timestamp;
 import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
 
-@TableId(type = IdType.AUTO)
+@TableName("robot")
+@Data
 public class Robot {
     private Integer id;
     private String name;
@@ -11,5 +15,13 @@ public class Robot {
     private Timestamp createdAt;
     private Timestamp updatedAt;
 
-    // Getters and setters
+    public Robot(Integer id, String name, String type, String status, Integer batteryLevel, Timestamp createdAt, Timestamp updatedAt) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.status = status;
+        this.batteryLevel = batteryLevel;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
 }

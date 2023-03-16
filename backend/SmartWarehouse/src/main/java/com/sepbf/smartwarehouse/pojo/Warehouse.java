@@ -1,7 +1,11 @@
+package com.sepbf.smartwarehouse.pojo;
+
 import java.sql.Timestamp;
 import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
 
-@TableId(type = IdType.AUTO)
+@TableName("warehouse")
+@Data
 public class Warehouse {
     private Integer id;
     private String name;
@@ -10,5 +14,12 @@ public class Warehouse {
     private Timestamp createdAt;
     private Timestamp updatedAt;
 
-    // Getters and setters
+    public Warehouse(Integer id, String name, Integer totalCapacity, Integer usedCapacity, Timestamp createdAt, Timestamp updatedAt) {
+        this.id = id;
+        this.name = name;
+        this.totalCapacity = totalCapacity;
+        this.usedCapacity = usedCapacity;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
 }

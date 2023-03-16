@@ -29,6 +29,8 @@ dependencies {
     implementation 'org.springframework.integration:spring-integration-kafka'
     implementation 'org.springframework.integration:spring-integration-redis'
     implementation 'org.springframework.kafka:spring-kafka'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.3'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'com.mysql:mysql-connector-j'

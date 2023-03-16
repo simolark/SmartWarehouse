@@ -1,8 +1,13 @@
+package com.sepbf.smartwarehouse.pojo;
+
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
 
-@TableId(type = IdType.AUTO)
+
+@TableName("order_list")
+@Data
 public class OrderList {
     private Integer id;
     private Integer customerId;
@@ -13,5 +18,14 @@ public class OrderList {
     private Timestamp createdAt;
     private Timestamp updatedAt;
 
-    // Getters and setters
+    public OrderList(Integer id, Integer customerId, Integer productId, Integer quantity, BigDecimal amount, String status, Timestamp createdAt, Timestamp updatedAt) {
+        this.id = id;
+        this.customerId = customerId;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.amount = amount;
+        this.status = status;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
 }
