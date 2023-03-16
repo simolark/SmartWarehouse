@@ -1,20 +1,47 @@
 ## 后端部分
 
-### 第一阶段
+### 开发规范：
 
- - 与团队成员讨论并明确项目需求，了解整体项目架构和功能设计。
- - 设计和创建项目文件结构，配置后端开发环境。
- - 确定后端技术栈（SpringBoot、Redis、Kafka、MyBatis-plus等）。
- - 设计数据库表结构和ER模型，编写相应的SQL语句。
- - 实现基本的用户注册、登录等相关功能的API。
- - 配置Redis、Kafka等中间件，确保系统稳定性和安全性。
- - 与前端和算法人员保持沟通，为前端提供所需API，了解算法接口需求。
- 
- ### 第二阶段
- 
- - 完善已有API，根据项目需求新增功能相关的API。
- - 与算法设计师进行联调，确保算法接口正常工作，解决潜在问题。
- - 对项目进行性能优化，如数据库查询优化、缓存策略调整等。
- - 完善系统安全性和稳定性，调整权限系统和异常处理策略。
- - 编写项目文档，包括API接口描述、数据库设计和系统架构等。
- - 根据用户反馈和需求调整，进行项目迭代。
+#### 文件树
+```
+SmartWarehouse
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── seobf
+│   │   │           └── SmartWarehouse
+│   │   │               ├── SmartWarehouseApplication.java (主应用程序类)
+│   │   │               ├── controller (控制器层)
+│   │   │               │   └── UserController.java
+│   │   │               ├── service (服务层)
+│   │   │               │   ├── UserService.java
+│   │   │               │   └── impl
+│   │   │               │       └── UserServiceImpl.java
+│   │   │               ├── repository (数据访问层)
+│   │   │               │   └── UserRepository.java
+│   │   │               ├── pojo (实体类)
+│   │   │               │   └── User.java
+│   │   │               └── config (配置类)
+│   │   │                   └── DataSourceConfig.java
+│   │   └── resources (资源文件)
+│   │       ├── application.properties (或application.yml，主配置文件)
+│   │       ├── static (静态资源，如CSS、JS、图像等)
+│   │       └── templates (Thymeleaf模板等)
+│   └── test (单元测试和集成测试)
+│       ├── java
+│       │   └── com
+│       │       └── example
+│       │           └── myapp
+│       │               ├── MyappApplicationTests.java
+│       │               ├── controller
+│       │               │   └── UserControllerTest.java
+│       │               └── service
+│       │                   └── UserServiceTest.java
+│       └── resources
+│           └── application-test.properties (或application-test.yml，用于测试的配置文件)
+├── .gitignore (用于指定在Git版本控制中忽略的文件和目录)
+├── pom.xml (Maven项目配置文件)
+├── build.gradle (Gradle项目配置文件，如果使用Gradle)
+└── README.md (项目说明文档)
+```
