@@ -1,9 +1,10 @@
 package com.sepbf.smartwarehouse.pojo;
 
-import java.sql.Timestamp;
-import java.math.BigDecimal;
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 
 
 @TableName("order_list")

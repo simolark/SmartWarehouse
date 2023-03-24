@@ -1,12 +1,9 @@
 package com.sepbf.smartwarehouse.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sepbf.smartwarehouse.pojo.Cart;
 import com.sepbf.smartwarehouse.service.CartService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/cart")
@@ -15,11 +12,17 @@ public class CartController {
     @Resource
     private CartService cartService;
 
-    @PostMapping ("/addCart")
+    @PostMapping("/addCart")
     public boolean addCart(@RequestBody Cart cart) {
         return cartService.addCart(cart);
     }
 
+    @GetMapping("/getCart")
+    public Cart getCart() {
+        System.out.println("getCart");
+        System.out.println(cartService.getCartById(1));
+        return cartService.getCartById(1);
+    }
 
 
 }
