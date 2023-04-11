@@ -1,61 +1,56 @@
 <template>
-  <div class="app-container">
-    <upload-excel-component :on-success="handleSuccess" :before-upload="beforeUpload" />
-    <el-table :data="tableData" border highlight-current-row style="width: 100%;margin-top:20px;">
-      <el-table-column v-for="item of tableHeader" :key="item" :prop="item" :label="item" />
-    </el-table>
-    
-    <h3 style="margin-left:805rpx;">点此上传训练集</h3>
-  <el-upload action="http://localhost:9090/files/upload/LRtrain" :on-success="filesUploadSuccess">
-
-    <el-button style="margin-left:820rpx;" size="small" type="primary">上传训练集</el-button>
-    
-  </el-upload>
-  <h3 style="margin-left:800rpx;">点此上传测试集</h3>
-
-  <el-upload action="http://localhost:9090/files/upload/LRtest" :on-success="filesUploadSuccess">
-
-<el-button style="margin-left:120rpx;" size="small" type="primary">上传测试集</el-button>
-
-</el-upload>
-
+  <div class="container">
+    <div class="grid">
+      <GridBox v-for="(count, index) in activeCounts" :key="index" :activeCount="count" />
+    </div>
   </div>
 </template>
 
 <script>
-import UploadExcelComponent from '@/components/UploadExcel/index.vue'
+import GridBox from '@/components/GridBox.vue';
 
 export default {
-  name: 'UploadExcel',
-  components: { UploadExcelComponent },
+  components: {
+    GridBox,
+  },
   data() {
     return {
-      tableData: [],
-      tableHeader: [] 
-    }
+      activeCounts: Array(20).fill(0), // 初始时，每个框的激活点数都设置为零
+    };
   },
   methods: {
-    filesUploadSuccess(res){
-       console.log(res)
-    },
-    // 文件上传
-    beforeUpload(file) {
-      const isLt1M = file.size / 1024 / 1024 < 1
+    async fetchData() {
+      // 使用fetch或axios从后端获取数据
+      // 假设您获取到了一个包含20个数字的数组，分别表示每个框的激活点数
+      // const responseData = await fetch('your-backend-url-here');
+      // const data = await responseData.json();
 
-      if (isLt1M) {
-        return true
-      }
-
-      this.$message({
-        message: 'Please do not upload files larger than 1m in size.',
-        type: 'warning'
-      })
-      return false
+      // 更新activeCounts数组
+      this.activeCounts = this.generateMockData();
     },
-    handleSuccess({ results, header }) {
-      this.tableData = results
-      this.tableHeader = header
-    }
-  }
-}
+    generateMockData() {
+      return Array.from({ length: 20 }, () => Math.floor(Math.random() * 51));
+    },
+    
+  },
+  created() {
+    this.fetchData();
+  },
+};
 </script>
+
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+</style>
