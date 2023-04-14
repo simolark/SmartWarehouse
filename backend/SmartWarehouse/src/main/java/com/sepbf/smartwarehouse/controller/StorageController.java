@@ -1,8 +1,6 @@
 package com.sepbf.smartwarehouse.controller;
 
-
-
-import com.sepbf.smartwarehouse.service.CartService;
+import com.sepbf.smartwarehouse.service.StorageService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +10,7 @@ import java.util.Map;
 @RequestMapping("/store")
 public class StorageController {
     @Resource
-    private CartService storageService;
+    private StorageService storageService;
 
 
     @PostMapping("/storeIn")
