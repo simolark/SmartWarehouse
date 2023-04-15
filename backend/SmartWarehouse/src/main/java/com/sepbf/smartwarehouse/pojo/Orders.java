@@ -1,12 +1,16 @@
 package com.sepbf.smartwarehouse.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import jakarta.persistence.Column;
 import lombok.Data;
 
-@TableName("order")
-@Data
-public class Order {
+import java.io.Serializable;
 
+@TableName("orders")
+@Data
+public class Orders implements Serializable {
+
+    @Column(name = "OrderID")
     private String orderID;
 
     private String productID;
@@ -17,7 +21,7 @@ public class Order {
 
     private String shelfID;
 
-    public Order(String orderID, String productID, int quantity, String warehouseID, String shelfID) {
+    public Orders(String orderID, String productID, int quantity, String warehouseID, String shelfID) {
         this.orderID = orderID;
         this.productID = productID;
         this.quantity = quantity;

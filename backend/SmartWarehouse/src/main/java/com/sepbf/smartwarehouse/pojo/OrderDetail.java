@@ -1,5 +1,6 @@
 package com.sepbf.smartwarehouse.pojo;
 import com.baomidou.mybatisplus.annotation.TableName;
+import jakarta.persistence.Column;
 import lombok.Data;
 
 import java.util.Date;
@@ -7,6 +8,7 @@ import java.util.Date;
 @TableName("order_detail")
 @Data
 public class OrderDetail {
+
 
     private String orderID;
 

@@ -1,7 +1,7 @@
 package com.sepbf.smartwarehouse.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sepbf.smartwarehouse.pojo.Order;
+import com.sepbf.smartwarehouse.pojo.Orders;
 import org.apache.ibatis.annotations.Mapper;
 /**
  * @author hanjiang
@@ -9,6 +9,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2023/4/14 14:52
  */
 @Mapper
-public interface OrderMapper extends BaseMapper<Order> {
+public interface OrderMapper extends BaseMapper<Orders> {
 
 }
