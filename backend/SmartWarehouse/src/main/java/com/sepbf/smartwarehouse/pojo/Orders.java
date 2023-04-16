@@ -10,21 +10,22 @@ import java.io.Serializable;
 @Data
 public class Orders implements Serializable {
 
-    private String orderid;
+    private String order_id;
 
-    private String productid;
+    private String product_id;
 
     private int quantity;
 
-    private String warehouseid;
+    private String warehouse_id;
 
-    private String shelfid;
+    private String shelf_id;
 
-    public Orders(String orderid, String productid, int quantity, String warehouseid, String shelfid) {
-        this.orderid = orderid;
-        this.productid = productid;
+    //构造函数
+    public Orders(String order_id, String product_id, int quantity, String warehouse_id, String shelf_id) {
+        this.order_id = order_id;
+        this.product_id = product_id;
         this.quantity = quantity;
-        this.warehouseid = warehouseid;
-        this.shelfid = shelfid;
+        this.warehouse_id = warehouse_id;
+        this.shelf_id = shelf_id;
     }
 }

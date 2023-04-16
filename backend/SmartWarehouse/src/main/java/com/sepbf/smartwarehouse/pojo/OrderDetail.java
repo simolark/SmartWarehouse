@@ -10,28 +10,29 @@ import java.util.Date;
 public class OrderDetail {
 
 
-    private String orderID;
+    private String order_id;
 
-    private String businessName;
+    private String business_name;
 
-    private int productTypeNum;
+    private int product_type_num;
 
-    private int productQuantity;
+    private int product_quantity;
 
     private float fee;
 
-    private Date startTime;
+    private Date start_time;
 
-    private Date endTime;
+    private Date end_time;
 
-    public OrderDetail(String orderID, String businessName, int productTypeNum, int productQuantity, float fee, Date startTime, Date endTime) {
-        this.orderID = orderID;
-        this.businessName = businessName;
-        this.productTypeNum = productTypeNum;
-        this.productQuantity = productQuantity;
+    //构造函数
+    public OrderDetail(String order_id, String business_name, int product_type_num, int product_quantity, float fee, Date start_time, Date end_time) {
+        this.order_id = order_id;
+        this.business_name = business_name;
+        this.product_type_num = product_type_num;
+        this.product_quantity = product_quantity;
         this.fee = fee;
-        this.startTime = startTime;
-        this.endTime = endTime;
+        this.start_time = start_time;
+        this.end_time = end_time;
     }
 
 }
