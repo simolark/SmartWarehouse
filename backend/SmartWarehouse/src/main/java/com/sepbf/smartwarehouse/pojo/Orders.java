@@ -10,22 +10,21 @@ import java.io.Serializable;
 @Data
 public class Orders implements Serializable {
 
-    @Column(name = "OrderID")
-    private String orderID;
+    private String orderid;
 
-    private String productID;
+    private String productid;
 
     private int quantity;
 
-    private String warehouseID;
+    private String warehouseid;
 
-    private String shelfID;
+    private String shelfid;
 
-    public Orders(String orderID, String productID, int quantity, String warehouseID, String shelfID) {
-        this.orderID = orderID;
-        this.productID = productID;
+    public Orders(String orderid, String productid, int quantity, String warehouseid, String shelfid) {
+        this.orderid = orderid;
+        this.productid = productid;
         this.quantity = quantity;
-        this.warehouseID = warehouseID;
-        this.shelfID = shelfID;
+        this.warehouseid = warehouseid;
+        this.shelfid = shelfid;
     }
 }

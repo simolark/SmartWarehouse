@@ -8,7 +8,7 @@ import com.sepbf.smartwarehouse.pojo.Orders;
  * @version 1.0
  * @date 2023/4/14 22:01
  */
-public interface OrderService extends IService<Orders> {
+public interface OrdersService extends IService<Orders> {
 
     boolean addOrder(Orders oder);
 

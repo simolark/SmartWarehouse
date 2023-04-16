@@ -1,7 +1,7 @@
 package com.sepbf.smartwarehouse.controller;
 
 import com.sepbf.smartwarehouse.pojo.Orders;
-import com.sepbf.smartwarehouse.service.Impl.OrderServiceImpl;
+import com.sepbf.smartwarehouse.service.OrdersService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +17,7 @@ import java.util.Map;
 public class StorageController {
 
     @Resource
-    private OrderServiceImpl orderService;
+    private OrdersService orderService;
 
 
     @PostMapping("/storeIn")
@@ -36,7 +36,6 @@ public class StorageController {
             System.out.println(orderService.addOrder(tempOrders));
         }
 
-//        orderService.addOrder()
         return true;
     }
 

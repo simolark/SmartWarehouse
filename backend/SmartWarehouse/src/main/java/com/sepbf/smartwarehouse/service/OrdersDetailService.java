@@ -9,5 +9,5 @@ import com.sepbf.smartwarehouse.pojo.OrderDetail;
  * @version 1.0
  * @date 2023/4/15 22:01
  */
-public interface OrderDetailService extends IService<OrderDetail> {
+public interface OrdersDetailService extends IService<OrderDetail> {
 }

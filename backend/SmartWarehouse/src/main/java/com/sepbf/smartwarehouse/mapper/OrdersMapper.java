@@ -9,6 +9,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2023/4/14 14:52
  */
 @Mapper
-public interface OrderMapper extends BaseMapper<Orders> {
+public interface OrdersMapper extends BaseMapper<Orders> {
 
 }
