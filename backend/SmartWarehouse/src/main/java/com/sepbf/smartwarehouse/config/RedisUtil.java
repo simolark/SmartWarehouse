@@ -1,6 +1,6 @@
 package com.sepbf.smartwarehouse.config;
 
-import jakarta.annotation.Resource;
+import javax.annotation.Resource;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 

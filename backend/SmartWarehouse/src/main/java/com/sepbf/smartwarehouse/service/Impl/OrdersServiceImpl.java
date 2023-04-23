@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sepbf.smartwarehouse.mapper.OrdersMapper;
 import com.sepbf.smartwarehouse.pojo.Orders;
 import com.sepbf.smartwarehouse.service.OrdersService;
-import jakarta.annotation.Resource;
+import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 /**

@@ -2,7 +2,7 @@ package com.sepbf.smartwarehouse.controller;
 
 import com.sepbf.smartwarehouse.pojo.Orders;
 import com.sepbf.smartwarehouse.service.OrdersService;
-import jakarta.annotation.Resource;
+import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

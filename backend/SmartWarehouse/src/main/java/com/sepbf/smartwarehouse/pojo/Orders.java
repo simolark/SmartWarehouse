@@ -1,7 +1,6 @@
 package com.sepbf.smartwarehouse.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import jakarta.persistence.Column;
 import lombok.Data;
 
 import java.io.Serializable;
