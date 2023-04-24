@@ -234,6 +234,22 @@ public class Astar {
                 map[100*i][100*k]=1;
             }
         }
+
+        /**
+         * coord 起始点的坐标 （a,b）
+         * coord1 终点的坐标（a,b）
+         *
+         * Node的结构：public Node(Coord coord, Node node_parent, float g, float h)
+         * node_parent父节点（在初始节点和最终节点定义时设为null,g,h值均设为0）
+         *
+         * MapInfo的结构：public MapInfo(float[][] maps, float width, float hight, Node node_start, Node node_end)
+         * maps[][]已经预设好的地图，map值为1的地方表示货架，map值为2的地方表示已经走过的路径
+         * width hight表示长 宽
+         * node_start起始节点 node_end目标节点
+         *
+         * 调用示例如下：
+         */
+
         Coord coord=new Coord(0,0);
         Coord coord1=new Coord(200,300);
         Node node=new Node(coord,null,1.0f,1.4f);
