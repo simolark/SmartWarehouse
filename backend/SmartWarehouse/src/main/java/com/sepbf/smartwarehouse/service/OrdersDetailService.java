@@ -10,4 +10,5 @@ import com.sepbf.smartwarehouse.pojo.OrderDetail;
  * @date 2023/4/15 22:01
  */
 public interface OrdersDetailService extends IService<OrderDetail> {
+    boolean addOderDetail(OrderDetail orderDetail);
 }

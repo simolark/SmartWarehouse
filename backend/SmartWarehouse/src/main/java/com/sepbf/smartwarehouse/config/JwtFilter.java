@@ -51,7 +51,7 @@ public class JwtFilter extends AccessControlFilter {
         try {
             // 委托 realm 进行登录认证
             //所以这个地方最终还是调用JwtRealm进行的认证
-            getSubject(servletRequest, servletResponse).login(jwtToken);
+//            getSubject(servletRequest, servletResponse).login(jwtToken);
             //也就是subject.login(token)
         } catch (Exception e) {
             e.printStackTrace();

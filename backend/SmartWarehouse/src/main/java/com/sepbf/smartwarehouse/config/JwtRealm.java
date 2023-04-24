@@ -32,7 +32,7 @@ public class JwtRealm extends AuthorizingRealm {
 
         String jwt = (String) token.getPrincipal();
         if (jwt == null) {
-            throw new NullPointerException("jwtToken 不允许为空");
+//            throw new NullPointerException("jwtToken 不允许为空");
         }
         //判断
         JwtUtil jwtUtil = new JwtUtil();

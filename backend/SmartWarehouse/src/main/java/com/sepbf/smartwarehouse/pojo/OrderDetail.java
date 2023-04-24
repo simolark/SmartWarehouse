@@ -8,10 +8,9 @@ import java.util.Date;
 @Data
 public class OrderDetail {
 
+    private String seller;
 
     private String order_id;
-
-    private String business_name;
 
     private int product_type_num;
 
@@ -24,9 +23,9 @@ public class OrderDetail {
     private Date end_time;
 
     //构造函数
-    public OrderDetail(String order_id, String business_name, int product_type_num, int product_quantity, float fee, Date start_time, Date end_time) {
+    public OrderDetail(String seller,String order_id,  int product_type_num, int product_quantity, float fee, Date start_time, Date end_time) {
+        this.seller = seller;
         this.order_id = order_id;
-        this.business_name = business_name;
         this.product_type_num = product_type_num;
         this.product_quantity = product_quantity;
         this.fee = fee;
