@@ -1,9 +1,9 @@
-public class Car {
+public class Robot {
     private int id;//小车唯一标识符
     private int state = 0;//0为空闲，1为占用
 
 
-    public Car(int id){
+    public Robot(int id){
         this.id = id;
     }
 
