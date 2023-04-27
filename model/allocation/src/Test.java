@@ -1,5 +1,5 @@
 
-public class Test {
+public class sTest {
 
     public static void main(String[] args) throws InterruptedException {
 

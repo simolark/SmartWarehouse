@@ -422,7 +422,10 @@ public class Astar {
         //获取距离值以及路径，
         float stageCost=Astar.startAstar(map1);
         List<Coord> path1 = Astar.startAstar1(map1);
+        for (Coord  coord2:path1) {
+            System.out.println("("+coord2.x+","+coord2.y+")");
 
+        }
         //TODO 1.解决后续货架选择算法无法将商品精确到件的问题
         //TODO 2.简化算法流程，将方法扩写为接口
         //TODO 3.尝试使用最大流算法解决问题
