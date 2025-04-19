@@ -1,0 +1,86 @@
+.submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  form {
+    width: 600px;
+    height: 100%;
+    padding: 30px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow-y: scroll;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #1890ff;
+  }
+  
+  .form-group button {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1890ff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-group button:hover {
+    background-color: #0d47a1;
+  }
+  
+  .submit-btn {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1890ff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0d47a1;
+  }
+
+  form {
+    height: 700px; /* 设置一个固定高度 */
+    overflow-y: auto; /* 修改为 scroll */
+  }
+  
